@@ -54,6 +54,8 @@ Initial previews use the original files, so large originals can be bandwidth-hea
 
 ## Deployment
 
+`vercel.json` selects the Next.js preset, runs `npm run build`, and sets `outputDirectory` to `null` to use framework defaults. This overrides an incorrect `public` output directory in imported project settings. Keep the Vercel Root Directory at the repository root. Both public Supabase environment variables must be configured for the deployment environment.
+
 The Vercel project is configured for Next.js with both public Supabase environment variables. Project source visibility is private. The app is at [skintific-gallery.vercel.app](https://skintific-gallery.vercel.app). Public gallery content can be viewed without a session; uploading and management require a Supabase session and active membership. Vercel's default project protection settings were retained. Deploy future updates from this folder with an authenticated Vercel CLI, or connect the source repository at https://github.com/radityabanyuskintific-hub/SKINTIFIC-GALLERY.
 
 Implementation follows [Supabase SSR guidance](https://supabase.com/docs/guides/auth/server-side/creating-a-client?framework=nextjs) and [Storage access policies](https://supabase.com/docs/guides/storage/security/access-control). See VERIFICATION.md for actual checks and limitations.
