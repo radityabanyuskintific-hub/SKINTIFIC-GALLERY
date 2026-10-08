@@ -68,3 +68,11 @@ This section supersedes the initial private-viewing and anonymous-read checks be
 - Cloudflare R2 photo storage remains the agreed next direction; no storage migration was performed as part of the UI revision.
 
 - CLI deployment fallback also failed: Vercel CLI could not load the user (fetch failed). No production deployment succeeded.
+
+
+## Production Supabase connection defaults
+
+- The live setup screen is triggered when either public Supabase variable is absent.
+- Added tracked .env.production containing only the confirmed project URL and sb_publishable browser key. No secret or service-role key is included. Private local settings remain ignored.
+- PASS: production build with .env.local temporarily removed; Next.js reported .env.production as its only environment file. Private local settings were restored afterward.
+- Vercel management access remains unavailable through the connector. This fix is delivered through the connected Git repository; live behavior must be checked after deployment.

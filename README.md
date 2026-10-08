@@ -8,6 +8,7 @@ Company image library built with Next.js, hosted on Vercel, with Supabase Auth, 
 - Vercel: `skintific-gallery`, project `prj_aXtsTKrmiOqZnnbvURRHfN9xWxKP`.
 - Originals bucket: `gallery-originals`, private, 15 MB per image.
 - `.env.local` and `.vercel/project.json` are local configuration and ignored by Git. No service-role key is used.
+- `.env.production` contains only the public Supabase project URL and publishable browser key so a fresh Vercel import connects to the existing gallery. Publishable keys do not bypass access policies. Do not add secret keys, service-role keys, passwords, or other private values to this tracked file. Vercel environment variables can override these defaults.
 
 ## First team account
 
@@ -54,7 +55,7 @@ Initial previews use the original files, so large originals can be bandwidth-hea
 
 ## Deployment
 
-`vercel.json` selects the Next.js preset, runs `npm run build`, and sets `outputDirectory` to `null` to use framework defaults. This overrides an incorrect `public` output directory in imported project settings. Keep the Vercel Root Directory at the repository root. Both public Supabase environment variables must be configured for the deployment environment.
+`vercel.json` selects the Next.js preset, runs `npm run build`, and sets `outputDirectory` to `null` to use framework defaults. This overrides an incorrect `public` output directory in imported project settings. Keep the Vercel Root Directory at the repository root. The tracked `.env.production` supplies both public Supabase variables during production builds, including Vercel preview builds. You can override them through Vercel environment settings when changing projects.
 
 The Vercel project is configured for Next.js with both public Supabase environment variables. Project source visibility is private. The app is at [skintific-gallery.vercel.app](https://skintific-gallery.vercel.app). Public gallery content can be viewed without a session; uploading and management require a Supabase session and active membership. Vercel's default project protection settings were retained. Deploy future updates from this folder with an authenticated Vercel CLI, or connect the source repository at https://github.com/radityabanyuskintific-hub/SKINTIFIC-GALLERY.
 
