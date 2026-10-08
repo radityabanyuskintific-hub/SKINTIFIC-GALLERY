@@ -1,4 +1,4 @@
-:root { color-scheme: light; --ink:#222; --muted:#626262; --accent:#075b83; --paper:#fff; --surface:#fff; --line:#e5e5e5; --control:#808080; --soft:#f3f3f3; --danger:#952e25; font-family:Arial,Helvetica,sans-serif; font-synthesis:none; }
+:root { color-scheme: light; --ink:#222; --muted:#626262; --accent:#075b83; --paper:#fff; --surface:#fff; --line:#e5e5e5; --control:#808080; --soft:#f3f3f3; --danger:#952e25; font-family:"Noto Sans",sans-serif; font-optical-sizing:auto; font-weight:400; font-style:normal; font-variation-settings:"wdth" 100; font-synthesis:none; }
 * { box-sizing:border-box; }
 body { margin:0; color:var(--ink); background:var(--paper); }
 button,input,select { font:inherit; }

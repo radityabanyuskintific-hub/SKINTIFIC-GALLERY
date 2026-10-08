@@ -10,7 +10,7 @@ The October 8 revision follows the supplied Cosmos reference and the explicit br
 - The masonry feed preserves image proportions, with nearly square corners and generous gutters inspired by the supplied reference. Five columns on wide desktop, two on phones. DOM and keyboard order follow the columns.
 - Tiles contain only images. Titles remain accessible button names and appear with tags, collection, and file details when opened.
 - Collection, sorting, refresh, Trash, and sign-out live in the options menu. The menu supports keyboard interaction, Escape, and outside-click dismissal.
-- Arial/Helvetica remains the product font. Blue is retained for form actions and keyboard focus, not used as feed decoration.
+- Noto Sans is the product font, as requested by the user, with variable weights, normal and italic styles, optical sizing, and width 100. Blue is retained for form actions and keyboard focus, not used as feed decoration.
 - Shadows indicate an open menu or dialog. Motion is limited to interaction feedback, with reduced-motion support. Tag controls remain at least 44 pixels tall, with focus clearance inside the scroll strip.
 - No copied Cosmos logo, onboarding cards, avatars, advertising, or invented gallery content.
 - Public browsing and active registered team upload/manage access remain. Trash and editing stay hidden from guests.
